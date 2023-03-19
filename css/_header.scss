@@ -1,0 +1,104 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 1111;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px $shadow;
+    height: 68px;
+    .container {
+        .logo {
+            a {
+                font-size: 25px;
+                font-weight: 600;
+                color: $title-c;
+                display: block;
+                text-transform: uppercase;
+            }
+        }
+        .navigation {
+            @media (min-width: 922px) {
+                display: block !important;
+                nav {
+                    align-items: center;
+                }
+            }
+            @media (max-width: 922px) {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 60px 20px;
+                background-color: rgba(0, 0, 0, .9);
+                nav {
+                    position: relative;
+                    flex-direction: column;
+                    padding: 30px 20px;
+                    background-color: $white;
+                    border-radius: 3px;
+                    width: 100%;
+                    height: 100%;
+                    .close-nav {
+                        display: block !important;
+                        position: absolute;
+                        top: -30px;
+                        right: 5px;
+                    }
+                    ul {
+                        flex-direction: column;
+                    }
+                }
+            }
+            nav {
+                display: flex;
+                gap: 20px;
+                .close-nav {
+                    display: none;
+                    cursor: pointer;
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        a {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $title-c;
+                            text-transform: capitalize;
+                            &.active,
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+                .get-started {
+                    color: $white;
+                    background-color: $red;
+                    &:hover {
+                        opacity: .9;
+                    }
+                }
+            }
+        }
+        .open-nav {
+            @media (min-width: 922px) {
+                display: none !important;
+            }
+            display: block;
+            cursor: pointer;
+            i {
+                font-size: 20px;
+                color: $title-c;
+            }
+        }
+    }
+}

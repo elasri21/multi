@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $white;
+    font-family: $d-family;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+i {
+    transition: .3s;
+}
+input, textarea {
+    border: none;
+    background: none;
+    outline: none;
+    transition: .3s;
+}
+section {
+    padding: 60px 0;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin: 0 100px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin: 0 70px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin: 0 50px !important;
+    }
+    margin: 0 30px !important;
+}
+.pattern {
+    margin-bottom: 30px;
+    h2 {
+        font-size: 45px;
+        font-weight: 700;
+        color: $title-c;
+        text-transform: uppercase;
+        width: fit-content;
+        span {
+            display: block;
+            font-size: 18px;
+            color: $grey-c;
+            font-weight: 500;
+            position: relative;
+            width: fit-content;
+            margin-bottom: 10px;
+            &::before {
+                content: "";
+                width: 120px;
+                height: 1px;
+                background-color: $red;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: calc(100% + 10px);
+            }
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6, a {
+    font-family: $t-family;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $default-c;
+    line-height: 1.6;
+}
+
+.btn-shape {
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-c {
+    display: flex;
+    align-items: center;
+}
+.btw-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-start {
+    display: flex;
+    align-items: flex-start;
+}
+.grid-250 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.grid-300 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
